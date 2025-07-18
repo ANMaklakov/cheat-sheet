@@ -1,0 +1,11 @@
+server {
+    listen 80 default_server ;
+    listen 443 ssl default_server ;
+
+    ssl_certificate /etc/letsencrypt/live/uend.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/uend.ru/privkey.pem;
+
+    access_log /var/log/nginx/ip_access.log combined;
+
+    return 444;
+}
